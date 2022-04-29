@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios'
 const request = axios.create({
-  baseURL: 'https://dog.ceo/'
+  // baseURL: import.meta.env.VITE_API_BASEURL
 })
 // 添加请求拦截器
 request.interceptors.request.use(function (config) {

@@ -10,6 +10,15 @@ export default defineConfig({
       // options are passed on to @vue/babel-plugin-jsx
     })
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://dog.ceo/',
+        changeOrigin: true
+        // rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': path.join(__dirname, './src')
